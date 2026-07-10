@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "fs-extra": "^11.3.6",
+    "jsonld": "^9.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "lint:js": "eslint . --ext js --report-unused-disable-directives --max-warnings 0",
+    "lint:js:fix": "eslint . --ext js --report-unused-disable-directives --max-warnings 0 --fix",
+    "lint:markdown": "markdownlint-cli2",
+    "lint:markdown:fix": "markdownlint-cli2 --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-jsdoc": "^63.0.13",
+    "globals": "^17.7.0",
+    "markdownlint-cli2": "^0.23.0"
+  }
+}
