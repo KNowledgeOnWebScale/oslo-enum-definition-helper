@@ -20,7 +20,7 @@ print the definitions of those properties.
    npm start
    ```
 
-4. The script generate 2 files:
+4. The script generates 2 files:
 
    - `enums.jsonld` contains the extracted enums.
    - `assertions.jsonld` contains the assertions related to the validation of the enums' definitions.
