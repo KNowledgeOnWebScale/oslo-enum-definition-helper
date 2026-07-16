@@ -29,7 +29,7 @@ print the definitions of those properties.
 
 ## Example
 
-You find example in the folder `example`.
+You find an example in the folder `example`.
 
 - The file `input.jsonld` contains the intermediary JSON-LD.
 - The file `enums.jsonld` contains the enums when running the script on `input.jsonld`.
