@@ -1,0 +1,632 @@
+{
+  "@context": {
+    "oslo": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rec": "http://www.w3.org/2001/02pd/rec54#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
+    "packages": "@included",
+    "classes": "@included",
+    "datatypes": "@included",
+    "attributes": "@included",
+    "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
+    "abstractClasses": "@included",
+    "rootClasses": "@included",
+    "baseURI": {
+      "@id": "oslo:baseURI",
+      "@type": "@id"
+    },
+    "vocDefinition": {
+      "@id": "oslo:vocDefinition",
+      "@container": "@set"
+    },
+    "apDefinition": {
+      "@id": "oslo:apDefinition",
+      "@container": "@set"
+    },
+    "vocLabel": {
+      "@id": "oslo:vocLabel",
+      "@container": "@set"
+    },
+    "apLabel": {
+      "@id": "oslo:apLabel",
+      "@container": "@set"
+    },
+    "diagramLabel": {
+      "@id": "oslo:diagramLabel"
+    },
+    "scope": {
+      "@id": "oslo:scope",
+      "@type": "@id"
+    },
+    "vocUsageNote": {
+      "@id": "oslo:vocUsageNote",
+      "@container": "@set"
+    },
+    "apUsageNote": {
+      "@id": "oslo:apUsageNote",
+      "@container": "@set"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@container": "@set"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
+    "minCount": {
+      "@id": "sh:minCount"
+    },
+    "maxCount": {
+      "@id": "sh:maxCount"
+    },
+    "parent": {
+      "@id": "rdfs:subClassOf",
+      "@type": "owl:Class"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime"
+    },
+    "Package": "oslo:Package",
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "AbstractClass": {
+      "@id": "oslo:AbstractClass"
+    },
+    "RootClass": {
+      "@id": "oslo:RootClass"
+    },
+    "DatatypeProperty": {
+      "@id": "owl:DatatypeProperty"
+    },
+    "ObjectProperty": {
+      "@id": "owl:ObjectProperty"
+    },
+    "authors": {
+      "@type": "foaf:Person",
+      "@id": "foaf:maker"
+    },
+    "editors": {
+      "@type": "foaf:Person",
+      "@id": "rec:editor"
+    },
+    "contributors": {
+      "@type": "foaf:Person",
+      "@id": "dcterms:contributor"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "assignedURI": {
+      "@id": "oslo:assignedURI",
+      "@type": "@id"
+    },
+    "Datatype": {
+      "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
+    },
+    "codelist": {
+      "@id": "oslo:codelist",
+      "@type": "@id"
+    },
+    "status": {
+      "@id": "adms:status",
+      "@type": "@id"
+    },
+    "extensions": {
+      "@id": "oslo:extensions",
+      "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
+    },
+    "inverseRange": {
+      "@reverse": "range"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "urn:oslo-toolchain:0b438652d2a1d42d05a3bcfa59c565fb37f238303b6af87cb888c0784e0c9940",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:2ab87ba52b724a9ea1f0e25099276d736b42810fe3ae37a8f1ce9e2077a967fd",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "en",
+            "@value": "Nature of the input."
+          },
+          {
+            "@language": "nl",
+            "@value": "Aard van de input."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "InputType"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "InputType",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "InputType"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:14374e76063258d3387a74cbca279000c2f13aaa213cfdfa1b8291fb1573e501",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:a5d30f4c7bfffa7ca20d21ccae3910850a7040bbf033f4cdfbb67151f1a0a9ef",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Aard van de aansluiting waar een voorziening (electriciteit, water, ...) of dienst geleverd wordt."
+          }
+        ],
+        "assignedURI": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#afleverpunt"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Classificatie van Afleverpunt."
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afleverpunttype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Afleverpunttype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Classificatie van Afleverpunt."
+        }
+      ],
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Afleverpunttype"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:2c43fa5187d4787f8c6b85803f0548bcf3efd4f25f7ffa602b8671905179e47f",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:001785b6312d97efddbfb20fcb725002864a26cdde278751f7d3210efcc9c20f",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "De eenheid waarin de waarde is uitgedrukt."
+          }
+        ],
+        "assignedURI": "http://qudt.org/schema/qudt/hasUnit"
+      },
+      "@type": "Class",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Idee of begrip."
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Concept"
+        }
+      ],
+      "apUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bedoeld om kennis te organiseren, bijvoorbeeld in een codelijst of taxonomie (een zogenaamde ConceptScheme). Zie <a href=\"https://www.w3.org/TR/skos-reference/\">SKOS</a> voor meer informatie."
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Concept",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5a2ca9990105abbd98bdb0ce55768abd5db0e954f0d4ba1cd7e26c2136d491fc",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:cce0e1823a2cd954a5b87b4326de2eb307b0a9f9a5dd87f7c7fcf29b93b7ec62",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Aard van de Aansturingsprocedure."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Aansturingsproceduretype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Aansturingproceduretype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5df199bc3cbed8307feacf4769f9c84bdb7266b834cb5999fd9dcf922c94af00",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:45257dc592722eddb87b2c85a44441f67249036c3a03fb49ba8326d2838f2226",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Aard van het Domeinobject."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Domeinobjecttype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Objecttype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Domeinobjecttype"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:6613be6b24b35bece1110dd6725be3a1f91b437eed75c14201962768f32a8cba",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:a2f1d60f7794c55c267f2099177c063ee4908afb3844cfc85593a7509c29eba6",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Het soort Aansturing."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Aansturingstype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Aansturingstype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External"
+    },
+    {
+      "@id": "urn:oslo-toolchain:6984cfdb382621bb3bd40091f42cce50b455e4a791856201086dd53cc4e9a6d4",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:6b9728f740b2c47e22decf53ea43e9f0b5d63247238f03ff33b741f7e6ec01d0",
+        "@type": "ObjectProperty",
+        "apDefinition": [],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "ObservatieCollectieType"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "ObservatieCollectietype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External"
+    },
+    {
+      "@id": "urn:oslo-toolchain:85c38984e44e0efaa07ac1717b2357d616450a93ab8328310d03a638ffaedc6e",
+      "inverseRange": [
+        {
+          "@id": "urn:oslo-toolchain:4e061e6c81778412a51793a33ff7c1119e09ca292a2d0c9c01662aa64c3c2eee",
+          "@type": "ObjectProperty",
+          "apDefinition": [
+            {
+              "@language": "nl",
+              "@value": "Aard vh Systeem."
+            }
+          ],
+          "assignedURI": "dcterms:type"
+        },
+        {
+          "@id": "urn:oslo-toolchain:ff27d8decf9681158328a04c8a39b00e3b13f93ea11c48ae5a69e67c24099b30",
+          "@type": "ObjectProperty",
+          "apDefinition": [],
+          "assignedURI": "dcterms:type"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Systeemtype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Systeemtype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Systeemtype"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:8d680be08a776a8aaacb260f11d285a1b649f65f3e00a0f03b8d08adf8455351",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:08973edd2616ea76f8654a06d1443ac6e1671c745378cf9b1787b903798fc91e",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Het type nutsvoorzieningnetwerk of het thema van het nutsvoorzieningnetwerk."
+          }
+        ],
+        "assignedURI": "http://purl.org/dc/elements/1.1/type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Classificatie van typen nutsvoorzieningnetwerken."
+        },
+        {
+          "@language": "en",
+          "@value": "Classification of utility network types."
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "en",
+          "@value": "UtilityNetworkTypeValue"
+        },
+        {
+          "@language": "nl",
+          "@value": "Nutsvoorzieningnetwerktype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Nutsvoorzieningnetwerktype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Classificatie van typen nutsvoorzieningnetwerken."
+        },
+        {
+          "@language": "en",
+          "@value": "Classification of utility network types."
+        }
+      ],
+      "vocLabel": [
+        {
+          "@language": "en",
+          "@value": "UtilityNetworkTypeValue"
+        },
+        {
+          "@language": "nl",
+          "@value": "Nutsvoorzieningnetwerktype"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:b8769fc98e6fcb65244ca6dd064a045492664b8e167e03ef2e56a44aa2ea5223",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:911a8c56a34c98bdf0ca6e4ff5ce40fa016b60fb7448946af77e5e98c1de63a2",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Aard van het Toebehoren."
+          }
+        ],
+        "assignedURI": "https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toebehorentype"
+        },
+        {
+          "@language": "en",
+          "@value": "AppurtenanceTypeValue"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Toebehorentype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Classificatie van de toebehoren."
+        },
+        {
+          "@language": "en",
+          "@value": "Classification of appurtenances."
+        }
+      ],
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Toebehorentype"
+        },
+        {
+          "@language": "en",
+          "@value": "AppurtenanceTypeValue"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:c68106d09e5dd782bf0f75dcf6f7c9c9ddf9b44e31bd53aa891ad1814b4b51fc",
+      "inverseRange": [
+        {
+          "@id": "urn:oslo-toolchain:4b99298e022c989c59ced9b5edaee6f2554319c918eb50ea32a9844135a52738",
+          "@type": "ObjectProperty",
+          "apDefinition": [
+            {
+              "@language": "nl",
+              "@value": "Het soort Observatie."
+            }
+          ],
+          "assignedURI": "dcterms:type"
+        },
+        {
+          "@id": "urn:oslo-toolchain:e346981f4ad7aa23505e4bb95aaa0c31beb89e727157347fe02299978b39e035",
+          "@type": "ObjectProperty",
+          "apDefinition": [],
+          "assignedURI": "dcterms:type"
+        }
+      ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Observatietype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Observatietype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External"
+    },
+    {
+      "@id": "urn:oslo-toolchain:cbae2c62686ab8d6652c22eaa7ecb08022474887e4d4a3bb6c9c64b797ca1401",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:cb962e40a380ea62dc91be93fc9fe3a48f480234b731b3d31e8ecc8118bbdc42",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "en",
+            "@value": "Nature of the Output."
+          },
+          {
+            "@language": "nl",
+            "@value": "Aard van de Output."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "OutputType"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "OutputType",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "OutputType"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:e8f1d818f221f06bf10a14c0e5d087e459558a5f865138cd1c3b0ee655bdbf58",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:9b66befeda268879b4249953bf45c8329de5b85f04c8cc6af0c9e91788140e47",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "en",
+            "@value": "Nature of the Observation Procedure."
+          },
+          {
+            "@language": "nl",
+            "@value": "Aard van de Observatieprocedure."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Observatieproceduretype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Observatieproceduretype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Observatieproceduretype"
+        }
+      ]
+    },
+    {
+      "@id": "urn:oslo-toolchain:f0c122668cc620afbfab4441ae649642095b0ff617f52dd93f9a4f85227ff276",
+      "inverseRange": {
+        "@id": "urn:oslo-toolchain:11361b99275b55178eeed03e70fc168569f3b6929826e30d4a821db6fc4acc54",
+        "@type": "ObjectProperty",
+        "apDefinition": [
+          {
+            "@language": "nl",
+            "@value": "Aard vh Platform."
+          }
+        ],
+        "assignedURI": "dcterms:type"
+      },
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Platformtype"
+        }
+      ],
+      "assignedURI": "skos:Concept",
+      "diagramLabel": "Platformtype",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Platformtype"
+        }
+      ]
+    }
+  ]
+}

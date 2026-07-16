@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "@vocab": "http://www.w3.org/ns/earl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ex": "http://example.com#",
+    "potentialFix": "ex:potentialFix",
+    "assertion": {
+      "@reverse": "subject"
+    },
+    "test": {
+      "@type": "@id"
+    },
+    "outcome": {
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:0b438652d2a1d42d05a3bcfa59c565fb37f238303b6af87cb888c0784e0c9940",
+      "dcterms:title": "InputType",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Nature of the input.\", \"Aard van de input.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:14374e76063258d3387a74cbca279000c2f13aaa213cfdfa1b8291fb1573e501",
+      "dcterms:title": "Afleverpunttype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:2c43fa5187d4787f8c6b85803f0548bcf3efd4f25f7ffa602b8671905179e47f",
+      "dcterms:title": "Concept",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:5a2ca9990105abbd98bdb0ce55768abd5db0e954f0d4ba1cd7e26c2136d491fc",
+      "dcterms:title": "Aansturingproceduretype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Aard van de Aansturingsprocedure.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:5df199bc3cbed8307feacf4769f9c84bdb7266b834cb5999fd9dcf922c94af00",
+      "dcterms:title": "Objecttype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Aard van het Domeinobject.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:6613be6b24b35bece1110dd6725be3a1f91b437eed75c14201962768f32a8cba",
+      "dcterms:title": "Aansturingstype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Het soort Aansturing.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:6984cfdb382621bb3bd40091f42cce50b455e4a791856201086dd53cc4e9a6d4",
+      "dcterms:title": "ObservatieCollectietype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum, but no AP definition provided for it."
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:85c38984e44e0efaa07ac1717b2357d616450a93ab8328310d03a638ffaedc6e",
+      "dcterms:title": "Systeemtype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Aard vh Systeem.\" \ndcterms:type uses this enum, but no AP definition provided for it."
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:8d680be08a776a8aaacb260f11d285a1b649f65f3e00a0f03b8d08adf8455351",
+      "dcterms:title": "Nutsvoorzieningnetwerktype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "outcome": "passed"
+        }
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:b8769fc98e6fcb65244ca6dd064a045492664b8e167e03ef2e56a44aa2ea5223",
+      "dcterms:title": "Toebehorentype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType uses this enum: \"Aard van het Toebehoren.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:c68106d09e5dd782bf0f75dcf6f7c9c9ddf9b44e31bd53aa891ad1814b4b51fc",
+      "dcterms:title": "Observatietype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Het soort Observatie.\" \ndcterms:type uses this enum, but no AP definition provided for it."
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:cbae2c62686ab8d6652c22eaa7ecb08022474887e4d4a3bb6c9c64b797ca1401",
+      "dcterms:title": "OutputType",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Nature of the Output.\", \"Aard van de Output.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:e8f1d818f221f06bf10a14c0e5d087e459558a5f865138cd1c3b0ee655bdbf58",
+      "dcterms:title": "Observatieproceduretype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Nature of the Observation Procedure.\", \"Aard van de Observatieprocedure.\" "
+      }
+    },
+    {
+      "@type": "TestSubject",
+      "@id": "urn:oslo-toolchain:f0c122668cc620afbfab4441ae649642095b0ff617f52dd93f9a4f85227ff276",
+      "dcterms:title": "Platformtype",
+      "assertion": {
+        "@type": "Assertion",
+        "test": "_:definition-test",
+        "result": {
+          "@type": "TestResult",
+          "dcterms:description": "No AP definition provided.",
+          "outcome": "failed"
+        },
+        "potentialFix": "dcterms:type uses this enum: \"Aard vh Platform.\" "
+      }
+    },
+    {
+      "@type": [
+        "TestCriterion",
+        "TestRequirement"
+      ],
+      "@id": "_:definition-test",
+      "dcterms:title": "An enum should have a AP definition."
+    }
+  ]
+}

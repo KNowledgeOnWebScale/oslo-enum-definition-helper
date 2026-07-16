@@ -20,50 +20,22 @@ print the definitions of those properties.
    npm start
    ```
 
-4. You find the enum, properties, and definitions in the terminal output.
+4. The script generate 2 files:
 
-## Example output
+   - `enums.jsonld` contains the extracted enums.
+   - `assertions.jsonld` contains the assertions related to the validation of the enums' definitions.
 
-```text
-Enum "InputType". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Nature of the input.", "Aard van de input." 
-Enum "Afleverpunttype". "Classificatie van Afleverpunt."
-Enum "Concept". "Idee of begrip."
-Enum "Aansturingproceduretype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Aard van de Aansturingsprocedure." 
-Enum "Objecttype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Aard van het Domeinobject." 
-Enum "Aansturingstype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Het soort Aansturing." 
-Enum "ObservatieCollectietype". 
-  No AP definition provided.
-  dcterms:type uses this enum, but no AP definition provided for it.
-Enum "Systeemtype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Aard vh Systeem." 
-  dcterms:type uses this enum, but no AP definition provided for it.
-Enum "Nutsvoorzieningnetwerktype". "Classificatie van typen nutsvoorzieningnetwerken.", "Classification of utility network types."
-Enum "Toebehorentype". 
-  No AP definition provided.
-  https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType uses this enum: "Aard van het Toebehoren." 
-Enum "Observatietype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Het soort Observatie." 
-  dcterms:type uses this enum, but no AP definition provided for it.
-Enum "OutputType". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Nature of the Output.", "Aard van de Output." 
-Enum "Observatieproceduretype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Nature of the Observation Procedure.", "Aard van de Observatieprocedure." 
-Enum "Platformtype". 
-  No AP definition provided.
-  dcterms:type uses this enum: "Aard vh Platform." 
-```
+5. The script prints a human-readable version of `assertions.jsonld` to standard out.
+
+## Example
+
+You find example in the folder `example`.
+
+- The file `input.jsonld` contains the intermediary JSON-LD.
+- The file `enums.jsonld` contains the enums when running the script on `input.jsonld`.
+- The file `stdout.txt` contains the content the script writes to standard out
+  when running the script on `input.jsonld`.
+- The file `assertions.jsonld` contains the assertions when running the script on `input.jsonld`.
 
 ## Linters
 

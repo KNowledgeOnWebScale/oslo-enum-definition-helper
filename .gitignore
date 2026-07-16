@@ -1,4 +1,4 @@
 node_modules
-input.jsonld
-output.jsonld
-errors.jsonld
+/input.jsonld
+/enums.jsonld
+/assertions.jsonld

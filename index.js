@@ -25,7 +25,7 @@ async function extract(inputObj) {
   };
 
   const framed = await jsonld.frame(inputObj, frame);
-  fs.writeJson("output.jsonld", framed, {
+  fs.writeJson("enums.jsonld", framed, {
     spaces: 2
   });
 
@@ -96,7 +96,7 @@ async function extract(inputObj) {
           }
         }
 
-        testSubject.assertion.potentialFix = potentialFix
+        testSubject.assertion.potentialFix = potentialFix;
       } else {
         const temp = "No property found that uses this enum.";
         text += temp;
@@ -115,7 +115,7 @@ async function extract(inputObj) {
     "dcterms:title": "An enum should have a AP definition."
   });
 
-  const errorsJsonLD = {
+  const assertionsJsonLD = {
     "@context": {
       "@vocab": "http://www.w3.org/ns/earl#",
       "dcterms": "http://purl.org/dc/terms/",
@@ -128,9 +128,9 @@ async function extract(inputObj) {
       }
     },
     "@graph": testSubjects
-  }
+  };
 
-  fs.writeJson("errors.jsonld", errorsJsonLD, {
+  fs.writeJson("assertions.jsonld", assertionsJsonLD, {
     spaces: 2
   });
 }
