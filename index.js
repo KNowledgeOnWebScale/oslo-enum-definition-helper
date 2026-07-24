@@ -130,7 +130,7 @@ export default async function extract(pathToIntermediateJsonLdFile) {
   testSubjects.push({
     "@type": ["TestCriterion", "TestRequirement"],
     "@id": "_:definition-test",
-    "dcterms:title": "An enum should have a AP definition."
+    "dcterms:title": "An enum should have an AP definition."
   });
 
   const assertionsJsonLD = {
