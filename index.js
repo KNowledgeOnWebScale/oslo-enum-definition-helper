@@ -32,6 +32,10 @@ export default async function extract(pathToIntermediateJsonLdFile) {
 
   // Merge results of the two framing operations.
   if (framed2["@graph"]) {
+    framed2["@graph"].forEach(el => {
+      console.error(`Enum "${el.diagramLabel}" uses incorrect URI for skos:Concept (https://www.w3.org/2004/02/skos/core#Concept)`);
+    });
+
     framed["@graph"] = framed["@graph"].concat(framed2["@graph"]);
   }
 
