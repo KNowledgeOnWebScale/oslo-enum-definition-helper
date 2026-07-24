@@ -19,6 +19,7 @@ async function extract(inputObj) {
     "inverseRange": {
       "@explicit": true,
       "apDefinition": {},
+      "vocDefinition": {},
       "assignedURI": {}
     }
   };
@@ -97,6 +98,10 @@ async function extract(inputObj) {
 
           if (p.apDefinition && p.apDefinition.length > 0) {
             const propDefs = p.apDefinition.map(d => `"${d["@value"]}"`).join(", ");
+            text += ": " + propDefs + " ";
+            potentialFix += ": " + propDefs + " ";
+          } else if (p.vocDefinition && p.vocDefinition.length > 0) {
+            const propDefs = p.vocDefinition.map(d => `"${d["@value"]}"`).join(", ");
             text += ": " + propDefs + " ";
             potentialFix += ": " + propDefs + " ";
           } else {
