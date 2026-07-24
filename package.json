@@ -1,11 +1,12 @@
 {
   "dependencies": {
+    "commander": "^15.0.0",
     "fs-extra": "^11.3.6",
     "jsonld": "^9.0.0"
   },
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node bin/cli.js",
     "lint:js": "eslint . --ext js --report-unused-disable-directives --max-warnings 0",
     "lint:js:fix": "eslint . --ext js --report-unused-disable-directives --max-warnings 0 --fix",
     "lint:markdown": "markdownlint-cli2",

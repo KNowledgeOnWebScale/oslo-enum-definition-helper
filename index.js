@@ -1,19 +1,17 @@
 import jsonld from "jsonld";
 import fs from "fs-extra";
 
-const inputObj = await fs.readJson("input.jsonld");
 const context = await fs.readJson("context.json");
-
-extract(inputObj);
 
 /**
  * This method extracts the definitions of enums.
  * If the method doesn't find a definition for an enum,
  * it will look for the properties that use this enum, and
  * print the definitions of those properties.
- * @param {object} inputObj - The JSON-LD object of the intermediate representation.
+ * @param {string} pathToIntermediateJsonLdFile - Path to the JSON-LD file with the intermediate representation.
  */
-async function extract(inputObj) {
+export default async function extract(pathToIntermediateJsonLdFile) {
+  const inputObj = await fs.readJson(pathToIntermediateJsonLdFile);
   const frame = {
     "@context": context,
     "inverseRange": {
@@ -33,7 +31,9 @@ async function extract(inputObj) {
   const framed2 = await jsonld.frame(inputObj, frame);
 
   // Merge results of the two framing operations.
-  framed["@graph"] = framed["@graph"].concat(framed2["@graph"]);
+  if (framed2["@graph"]) {
+    framed["@graph"] = framed["@graph"].concat(framed2["@graph"]);
+  }
 
   fs.writeJson("enums.jsonld", framed, {
     spaces: 2
@@ -105,8 +105,8 @@ async function extract(inputObj) {
             text += ": " + propDefs + " ";
             potentialFix += ": " + propDefs + " ";
           } else {
-            text += ", but no AP definition provided for it.";
-            potentialFix += ", but no AP definition provided for it.";
+            text += ", but no AP or VOC definition provided for it.";
+            potentialFix += ", but no AP or VOC definition provided for it.";
           }
         }
 

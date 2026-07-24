@@ -20,6 +20,7 @@ print the definitions of those properties.
    npm start
    ```
 
+   Note that you can choose your own input file via the option `-i, --input`.
 4. The script generates 2 files:
 
    - `enums.jsonld` contains the extracted enums.
