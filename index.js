@@ -16,7 +16,6 @@ extract(inputObj);
 async function extract(inputObj) {
   const frame = {
     "@context": context,
-    "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
     "inverseRange": {
       "@explicit": true,
       "apDefinition": {},
@@ -24,7 +23,17 @@ async function extract(inputObj) {
     }
   };
 
+  // Frame frist with http URI of skos:Concept.
+  frame.assignedURI = "http://www.w3.org/2004/02/skos/core#Concept";
   const framed = await jsonld.frame(inputObj, frame);
+
+  // Frame a second time with https URI of skos:Concept.
+  frame.assignedURI = "https://www.w3.org/2004/02/skos/core#Concept";
+  const framed2 = await jsonld.frame(inputObj, frame);
+
+  // Merge results of the two framing operations.
+  framed["@graph"] = framed["@graph"].concat(framed2["@graph"]);
+
   fs.writeJson("enums.jsonld", framed, {
     spaces: 2
   });
