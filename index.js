@@ -1,7 +1,7 @@
 import jsonld from "jsonld";
 import fs from "fs-extra";
 
-const context = await fs.readJson("context.json");
+const context = await fs.readJson(new URL("context.json", import.meta.url),);
 
 /**
  * This method extracts the definitions of enums.
